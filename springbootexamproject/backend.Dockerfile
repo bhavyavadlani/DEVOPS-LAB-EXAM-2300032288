@@ -19,8 +19,7 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
-#change this 
-EXPOSE 2000 
+EXPOSE 2000
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
